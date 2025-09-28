@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "DED",
+        "ECE",
+        "DED"
+    ],
+    "key": {
+        "D": {
+            "item": "minecraft:dragon_egg"
+        },
+        "E": {
+            "item": "draconicevolution:chaotic_energy_core"
+        },
+        "C": {
+            "item": "draconicevolution:chaotic_core"
+        }
+    },
+    "result": {
+        "item": "advanced_little_garbage:create_energy_core",
+        "count": 1
+    }
+}

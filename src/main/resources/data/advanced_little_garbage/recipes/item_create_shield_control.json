@@ -1,0 +1,42 @@
+{
+    "type": "avaritia:shaped_table",
+    "category": "equipment",
+    "pattern": [
+        "IWWWSWWWI",
+        "WIDDSDDIW",
+        "WDIDSDIDW",
+        "WDDISIDDW",
+        "AAAACAAAA",
+        "WDDISIDDW",
+        "WDIDSDIDW",
+        "WIDDSDDIW",
+        "IWWWSWWWI"
+
+    ],
+    "key": {
+        "A": {
+            "item": "advanced_little_garbage:create_energy_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "C": {
+            "item": "draconicevolution:item_chaotic_shield_control"
+        },
+        "D": {
+            "item": "draconicevolution:item_draconic_shield_control"
+        },
+        "W": {
+            "item": "draconicevolution:item_wyvern_shield_control"
+        },
+        "S": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "item": "advanced_little_garbage:item_create_shield_control",
+        "count": 1
+    },
+    "show_notification": true,
+    "tier": 4
+}

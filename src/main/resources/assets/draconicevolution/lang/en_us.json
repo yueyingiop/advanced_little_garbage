@@ -1,0 +1,12 @@
+{
+    "itemGroup.alg_tab": "ALG",
+
+    "item.advanced_little_garbage.create_energy_core": "Create Energy Controller",
+    "item.advanced_little_garbage.item_create_energy": "Create Energy Module",
+    "item.advanced_little_garbage.item_create_shield_control": "Create Shield Control Module",
+    "item.advanced_little_garbage.item_create_large_shield_capacity": "Create Large Shield Capacity Module",
+    "item.advanced_little_garbage.item_chaotic_auto_feed": "Chaotic Auto Feed Module",
+    "item.advanced_little_garbage.item_create_auto_feed": "Create Auto Feed Module",
+    "item.advanced_little_garbage.item_create_damage": "Create Damage Module",
+    "item.advanced_little_garbage.item_create_projectile": "Create Projectile Module"
+}
