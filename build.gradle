@@ -1,0 +1,243 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.141'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    // 在此定义 wrapper 值，以避免在更新 gradlew.properties 时每次都必须这样做。
+    // 将此设置为 Wrapper.DistributionType.ALL 会下载完整的 gradle 源码，并在将鼠标悬停在 gradle 类和方法时附带文档。
+    // 然而，这会增加 Gradle 的文件大小。如果你将其切换为 ALL，请在之后运行两次 Gradle wrapper 任务。
+    // （通过检查 gradle/wrapper/gradle-wrapper.properties 来验证 distributionUrl 是否现在指向 `-all`）
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    // 包含由数据生成器生成的资源。
+    srcDir('src/generated/resources')
+
+    // 从最终输出中排除常见的仅用于开发的资源
+    exclude("**/*.bbmodel") // BlockBench 项目文件
+    exclude("src/generated/**/.cache") // datagen 缓存文件
+}
+
+base {
+    archivesName = mod_id
+}
+
+// Mojang 在 1.21.1 中向最终用户发布 Java 21，因此 mod 应该以 Java 21 为目标。
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    // 指定要使用的 NeoForge 版本。
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    // 这行是可选的。访问转换器会自动检测
+    // accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
+
+    // 默认运行配置。
+    // 这些可以根据需要进行调整、删除或复制。
+    runs {
+        client {
+            client()
+
+            // 用逗号分隔的命名空间列表，用于从中加载 gametests。为空 = 所有命名空间。
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        // 这个运行配置会启动 GameTestServer，运行所有注册的 gametests，然后退出。
+        // 默认情况下，如果没有提供 gametests，服务器会崩溃。
+        // gametest 系统默认也会在 /test 命令下的其他运行配置中启用。
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+
+            // 覆盖上面 configureEach 中设置的工作目录的示例，如果你想这样做请取消注释
+            // gameDirectory = project.file('run-data')
+
+            // 指定数据生成的 modid，输出生成资源的位置，以及查找现有资源的位置。
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        // 适用于上面的所有运行配置
+        configureEach {
+            // 推荐在 userdev 环境中记录的日志数据
+            // 标记可以根据需要添加/删除，用逗号分隔。
+            // "SCAN"：用于 mod 扫描。
+            // "REGISTRIES"：用于触发注册表事件。
+            // "REGISTRYDUMP"：用于获取所有注册表的内容。
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+
+            // 为控制台推荐的日志级别
+            // 你可以在这里设置不同的级别。
+            // 请阅读：https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        // 定义 mod <-> 源绑定
+        // 这些用于告诉游戏哪些源属于哪个 mod
+        // 多 mod 项目应为每个 mod 定义一个
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+// 设置一个名为 'localRuntime' 的依赖配置。
+// 应该使用此配置而不是 'runtimeOnly' 来声明
+// 在运行时测试期间存在但
+// “可选”的依赖，这意味着它不会被此 mod 的依赖项拉取。
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+repositories {
+    // 如果下面某些依赖项需要，请在此添加额外的仓库。
+
+    // 添加库:Architectury API
+    maven {
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "dev.architectury"
+        }
+    }
+
+    // 添加库:kubejs API
+    maven {
+        url "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
+        }
+    }
+
+    // Modrinth Maven
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+
+    // CurseForge Maven
+    maven {
+        url "https://cursemaven.com/"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+    // 玉
+    maven { 
+        url = "https://api.modrinth.com/maven" 
+    }
+    
+    // JEI
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+
+    maven {
+        url 'https://jitpack.io'
+        content {
+            includeGroup "com.github.rtyley"
+        }
+    }
+}
+
+dependencies {
+
+    api("dev.latvian.mods:rhino:$rhino_version") { transitive(false) } // Rhino
+    // Kubejs
+    api("dev.latvian.mods:kubejs-neoforge:$kubejs_version")
+    interfaceInjectionData("dev.latvian.mods:kubejs-neoforge:$kubejs_version")
+    compileOnly("dev.architectury:architectury-neoforge:$architectury_version") // Architectury
+
+    implementation("curse.maven:probejs-585406:7105159") // Probejs
+
+    implementation("maven.modrinth:jade:${jade_version}") // Jade
+    // JEI
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+
+
+    // 使用文件作为依赖的 mod 依赖示例
+    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
+
+    // 使用姊妹或子项目的项目依赖示例：
+    // implementation project(":myproject")
+}
+
+// 这段代码块会将所有声明的替换属性展开到指定的资源目标中。
+// 缺少属性会导致错误。属性使用 ${} Groovy 表示法进行展开。
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+// 将 "generateModMetadata" 的输出作为构建的输入目录
+// 这可用于通过 Gradle 和 IDE 进行构建。
+sourceSets.main.resources.srcDir generateModMetadata
+// 为了避免必须手动运行 "generateModMetadata"，让它在每次项目重新加载时运行
+neoForge.ideSyncTask generateModMetadata
+
+// 允许使用 maven-publish 插件进行发布的示例配置
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // 在 Java 编译中使用 UTF-8 字符集
+}
+
+// IDEA 不再自动下载依赖项的源代码/javadoc jar，因此我们需要显式启用该行为。
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
