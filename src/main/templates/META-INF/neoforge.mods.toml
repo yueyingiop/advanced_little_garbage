@@ -7,7 +7,7 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 description='''
-Example mod description.
+为各种mod添加一些小玩意
 '''
 
 
@@ -25,3 +25,19 @@ Example mod description.
     ordering="NONE"
     side="BOTH"
 
+[[dependencies."${mod_id}"]]
+    modId="curios" # 饰品
+    type="optional"
+    versionRange="[${curios_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies."${mod_id}"]]
+    modId="draconicevolution" # 龙之研究
+    type="optional"
+    versionRange="[${de_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config="${mod_id}.mixins.json"

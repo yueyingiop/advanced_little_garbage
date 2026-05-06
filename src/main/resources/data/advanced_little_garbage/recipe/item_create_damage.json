@@ -1,0 +1,48 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "AITLCLTIA",
+        "IIDLCLDII",
+        "TDNLCLNDT",
+        "LLLSMSLLL",
+        "CCCMAMCCC",
+        "LLLSMSLLL",
+        "TDNLCLNDT",
+        "IIDLCLDII",
+        "AITLCLTIA"
+    ],
+    "key": {
+        "A": {
+            "item": "advanced_little_garbage:create_energy_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "N": {
+            "item": "minecraft:netherite_sword"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        },
+        "T": {
+            "item": "minecraft:iron_sword"
+        },
+        "C": {
+            "item": "draconicevolution:chaotic_core"
+        },
+        "M": {
+            "item": "draconicevolution:item_chaotic_damage"
+        },
+        "S": {
+            "item": "draconicevolution:chaos_shard"
+        },
+        "L": {
+            "item": "draconicevolution:large_chaos_frag"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_damage",
+        "count": 1
+    },
+    "tier": 4
+}

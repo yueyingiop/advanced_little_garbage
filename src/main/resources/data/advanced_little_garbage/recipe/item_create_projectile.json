@@ -1,0 +1,45 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "DDVVIVVDD",
+        "DGGVMVGGD",
+        "PGIAMAIGP",
+        "PPAAMAAPP",
+        "IMMMCMMMI",
+        "PPAAMAAPP",
+        "PGIAMAIGP",
+        "DGGVMVGGD",
+        "DDVVIVVDD"
+    ],
+    "key": {
+        "C": {
+            "item": "advanced_little_garbage:create_energy_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "A": {
+            "item": "draconicevolution:item_chaotic_proj_accuracy"
+        },
+        "D": {
+            "item": "draconicevolution:item_chaotic_proj_damage"
+        },
+        "G": {
+            "item": "draconicevolution:item_chaotic_proj_grav_comp"
+        },
+        "P": {
+            "item": "draconicevolution:item_chaotic_proj_penetration"
+        },
+        "V": {
+            "item": "draconicevolution:item_chaotic_proj_velocity"
+        },
+        "M": {
+            "item": "draconicevolution:chaotic_core"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_projectile",
+        "count": 1
+    },
+    "tier": 4
+}

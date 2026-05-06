@@ -161,6 +161,25 @@ repositories {
         url = "https://modmaven.dev"
     }
 
+    // 饰品
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
+
+    exclusiveContent {
+		forRepository {
+			maven {
+				url = "https://maven.covers1624.net/"
+			}
+		}
+		filter {
+			includeGroup "io.codechicken"
+			includeGroup "com.brandon3055.brandonscore"
+			includeGroup "com.brandon3055.draconicevolution"
+		}
+	}
+
     maven {
         url 'https://jitpack.io'
         content {
@@ -184,7 +203,20 @@ dependencies {
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
+    // Curios API
+    compileOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}:api")
+    runtimeOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}")
 
+    // CodeChickenLib
+    implementation("com.brandon3055.brandonscore:BrandonsCore:$minecraft_version-$bcore_version")
+	// Brandon's Core
+    implementation("io.codechicken:CodeChickenLib:$minecraft_version-$ccl_version")
+    // 龙之研究
+    implementation("com.brandon3055.draconicevolution:Draconic-Evolution:${minecraft_version}-${de_version}")
+
+    // 无尽贪婪
+    implementation("curse.maven:re-avaritia-623969:7617495") { transitive(false) }
+    
     // 使用文件作为依赖的 mod 依赖示例
     // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
 

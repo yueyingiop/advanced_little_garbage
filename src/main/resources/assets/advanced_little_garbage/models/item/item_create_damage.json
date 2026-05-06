@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "advanced_little_garbage:item/module/create",
+    "layer1": "advanced_little_garbage:module/create_damage"
+  }
+}

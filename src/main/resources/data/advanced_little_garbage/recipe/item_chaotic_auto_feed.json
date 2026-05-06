@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "MFM",
+        "CDC",
+        "MFM"
+    ],
+    "key": {
+        "D": {
+            "item": "draconicevolution:item_draconic_auto_feed"
+        },
+        "M": {
+            "item": "draconicevolution:medium_chaos_frag"
+        },
+        "C": {
+            "item": "draconicevolution:draconium_core"
+        },
+        "F": {
+            "item": "minecraft:golden_apple"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_chaotic_auto_feed",
+        "count": 1
+    }
+}

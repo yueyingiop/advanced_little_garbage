@@ -1,0 +1,42 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "         ",
+        " UCMEMCU ",
+        " CUCECUC ",
+        " MCIEICM ",
+        " AAAFAAA ",
+        " MCIEICM ",
+        " CUCECUC ",
+        " UCMEMCU ",
+        "         "
+    ],
+    "key": {
+        "F": {
+            "item": "advanced_little_garbage:item_chaotic_auto_feed"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "M": {
+            "item": "avaritia:crystal_matrix_ingot"
+        },
+        "U": {
+            "item": "avaritia:ultimate_stew"
+        },
+        "C": {
+            "item": "avaritia:cosmic_meatballs"
+        },
+        "E": {
+            "item": "minecraft:enchanted_golden_apple"
+        },
+        "A": {
+            "item": "draconicevolution:awakened_core"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_auto_feed",
+        "count": 1
+    },
+    "tier": 4
+}

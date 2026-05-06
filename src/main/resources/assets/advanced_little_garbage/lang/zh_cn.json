@@ -1,0 +1,12 @@
+{
+    "itemGroup.alg_tab": "高级小垃圾",
+
+    "item.advanced_little_garbage.create_energy_core": "创造能量核心",
+    "item.advanced_little_garbage.item_create_energy": "创造能量模块",
+    "item.advanced_little_garbage.item_create_shield_control": "创造护盾控制模块",
+    "item.advanced_little_garbage.item_create_large_shield_capacity": "创造大型护盾增强",
+    "item.advanced_little_garbage.item_chaotic_auto_feed": "混沌自动进食模块",
+    "item.advanced_little_garbage.item_create_auto_feed": "创造自动进食模块",
+    "item.advanced_little_garbage.item_create_damage": "创造伤害模块",
+    "item.advanced_little_garbage.item_create_projectile": "创造弹射物模块"
+}

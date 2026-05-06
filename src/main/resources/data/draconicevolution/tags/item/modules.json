@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "advanced_little_garbage:item_create_energy",
+        "advanced_little_garbage:item_create_shield_control",
+        "advanced_little_garbage:item_create_large_shield_capacity",
+        "advanced_little_garbage:item_chaotic_auto_feed",
+        "advanced_little_garbage:item_create_auto_feed",
+        "advanced_little_garbage:item_create_damage",
+        "advanced_little_garbage:item_create_projectile"
+    ]
+}

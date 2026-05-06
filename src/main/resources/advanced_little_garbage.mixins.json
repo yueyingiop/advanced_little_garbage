@@ -1,0 +1,20 @@
+{
+    "required": true,
+    "package": "com.yueyingiop.ALG.mixin",
+    "plugin": "com.core.ALG.mixin.MixinPlugin",
+    "compatibilityLevel": "JAVA_17",
+    "refmap": "mixins.advanced_little_garbage.refmap.json",
+    "mixins": [
+        "DraconiCevolution.EnergyEntityMxin",
+        "DraconiCevolution.ShieldControlEntityMixin",
+        "DraconiCevolution.AutoFeedEntityMixin",
+        "DraconiCevolution.ModularBowMixin",
+        "DraconiCevolution.ModularSwordMixin",
+        "DraconiCevolution.ModularStaffMixin",
+        "DraconiCevolution.ModularAxeMixin",
+        "DraconiCevolution.ModuleEntityMixin"
+    ],
+    "client": [
+    ],
+    "minVersion": "0.8.5"
+}

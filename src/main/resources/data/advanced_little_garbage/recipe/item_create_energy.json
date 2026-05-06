@@ -1,0 +1,39 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "SIIIAIIIS",
+        "ISDRARDSI",
+        "IDSDADSDI",
+        "IRDSASDRI",
+        "AAAACAAAA",
+        "IRDSASDRI",
+        "IDSDADSDI",
+        "ISDRARDSI",
+        "SIIIAIIIS"
+    ],
+    "key": {
+        "A": {
+            "item": "advanced_little_garbage:create_energy_core"
+        },
+        "S": {
+            "item": "draconicevolution:reactor_stabilizer"
+        },
+        "R": {
+            "item": "draconicevolution:reactor_injector"
+        },
+        "C": {
+            "item": "draconicevolution:reactor_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "D": {
+            "item": "avaritia:diamond_lattice_block"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_energy",
+        "count": 1
+    },
+    "tier": 4
+}

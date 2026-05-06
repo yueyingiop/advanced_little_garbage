@@ -1,0 +1,36 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "CCCCLCCCC",
+        "CRIILIIRC",
+        "CIRILIRIC",
+        "CIIRLRIIC",
+        "LLLLALLLL",
+        "CIIRLRIIC",
+        "CIRILIRIC",
+        "CRIILIIRC",
+        "CCCCLCCCC"
+    ],
+    "key": {
+        "A": {
+            "item": "advanced_little_garbage:create_energy_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "L": {
+            "item": "draconicevolution:item_chaotic_large_shield_capacity"
+        },
+        "C": {
+            "item": "draconicevolution:item_chaotic_shield_capacity"
+        },
+        "R": {
+            "item": "draconicevolution:item_chaotic_shield_recovery"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_large_shield_capacity",
+        "count": 1
+    },
+    "tier": 4
+}
