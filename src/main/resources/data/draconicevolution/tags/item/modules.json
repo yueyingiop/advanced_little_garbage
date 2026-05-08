@@ -7,6 +7,18 @@
         "advanced_little_garbage:item_chaotic_auto_feed",
         "advanced_little_garbage:item_create_auto_feed",
         "advanced_little_garbage:item_create_damage",
-        "advanced_little_garbage:item_create_projectile"
+        "advanced_little_garbage:item_create_projectile",
+
+        "advanced_little_garbage:item_draconium_effect_load",
+        "advanced_little_garbage:item_wyvern_effect_load",
+        "advanced_little_garbage:item_draconic_effect_load",
+        "advanced_little_garbage:item_chaotic_effect_load",
+        "advanced_little_garbage:item_create_effect_load",
+
+        "advanced_little_garbage:item_draconium_effect_remove",
+        "advanced_little_garbage:item_wyvern_effect_remove",
+        "advanced_little_garbage:item_draconic_effect_remove",
+        "advanced_little_garbage:item_chaotic_effect_remove",
+        "advanced_little_garbage:item_create_effect_remove"
     ]
 }
