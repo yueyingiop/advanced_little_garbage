@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "MWM",
+        "CDC",
+        "MWM"
+    ],
+    "key": {
+        "D": {
+            "item": "draconicevolution:chaotic_core"
+        },
+        "M": {
+            "item": "draconicevolution:chaos_shard"
+        },
+        "C": {
+            "item": "advanced_little_garbage:item_draconic_effect_load"
+        },
+        "W": {
+            "tag": "c:drinks/watery"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_chaotic_effect_load",
+        "count": 1
+    }
+}

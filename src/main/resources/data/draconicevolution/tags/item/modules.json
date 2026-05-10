@@ -19,6 +19,13 @@
         "advanced_little_garbage:item_wyvern_effect_remove",
         "advanced_little_garbage:item_draconic_effect_remove",
         "advanced_little_garbage:item_chaotic_effect_remove",
-        "advanced_little_garbage:item_create_effect_remove"
+        "advanced_little_garbage:item_create_effect_remove",
+        
+        "advanced_little_garbage:item_draconium_enchanted_load",
+        "advanced_little_garbage:item_wyvern_enchanted_load",
+        "advanced_little_garbage:item_draconic_enchanted_load",
+        "advanced_little_garbage:item_chaotic_enchanted_load",
+        "advanced_little_garbage:item_create_enchanted_load"
+
     ]
 }

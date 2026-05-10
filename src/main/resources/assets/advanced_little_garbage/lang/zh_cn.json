@@ -21,10 +21,20 @@
     "item.advanced_little_garbage.item_draconic_effect_remove": "神龙效果移除模块",
     "item.advanced_little_garbage.item_chaotic_effect_remove": "混沌效果移除模块",
     "item.advanced_little_garbage.item_create_effect_remove": "创造效果移除模块",
+    
+    "item.advanced_little_garbage.item_draconium_enchanted_load": "附魔加载模块",
+    "item.advanced_little_garbage.item_wyvern_enchanted_load": "双足飞龙附魔加载模块",
+    "item.advanced_little_garbage.item_draconic_enchanted_load": "神龙附魔加载模块",
+    "item.advanced_little_garbage.item_chaotic_enchanted_load": "混沌附魔加载模块",
+    "item.advanced_little_garbage.item_create_enchanted_load": "创造附魔加载模块",
 
     "module_type.draconicevolution.effect_load.name": "效果加载",
     "module_type.draconicevolution.effect_remove.name": "效果移除",
+    "module_type.draconicevolution.enchanted_load.name": "附魔加载",
 
     "tooltip.advanced_little_garbage.effect_module.effect": "   %s %s",
-    "tooltip.advanced_little_garbage.effect_module.count": "效果数量：%s [Shift+]"
+    "tooltip.advanced_little_garbage.effect_module.count": "效果数量：%s [Shift+]",
+
+    "tooltip.advanced_little_garbage.enchanted_module.enchantment": "   %s %s",
+    "tooltip.advanced_little_garbage.enchanted_module.count": "附魔数量：%s [Shift+]"
 }

@@ -1,0 +1,39 @@
+{
+    "type": "avaritia:shaped_table",
+    "pattern": [
+        "SIIIAIIIS",
+        "ISDRARDSI",
+        "IDSDADSDI",
+        "IRDSASDRI",
+        "AAAACAAAA",
+        "IRDSASDRI",
+        "IDSDADSDI",
+        "ISDRARDSI",
+        "SIIIAIIIS"
+    ],
+    "key": {
+        "A": {
+            "item": "advanced_little_garbage:item_chaotic_effect_load"
+        },
+        "S": {
+            "item": "draconicevolution:chaotic_crafting_injector"
+        },
+        "R": {
+            "item": "draconicevolution:fluid_gate"
+        },
+        "C": {
+            "item": "avaritia:enhancement_core"
+        },
+        "I": {
+            "item": "avaritia:infinity_catalyst"
+        },
+        "D": {
+            "item": "avaritia:blaze_cube_block"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_create_effect_load",
+        "count": 1
+    },
+    "tier": 4
+}

@@ -5,6 +5,7 @@ import com.brandon3055.draconicevolution.api.capability.ModuleProvider;
 import com.brandon3055.draconicevolution.api.modules.items.ModuleItem;
 import com.yueyingiop.ALG.ALG;
 import com.yueyingiop.ALG.item.DraconiCevolution.moduleItem.EffectModuleItem;
+import com.yueyingiop.ALG.item.DraconiCevolution.moduleItem.EnchantedModuleItem;
 import com.yueyingiop.ALG.util.ModConditions;
 
 import net.minecraft.world.item.Item;
@@ -94,34 +95,64 @@ public class RegistryModuleItem {
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CREATE_EFFECT_LOAD.get())
     ):null;
 
-    // 药水加载模块
+    // 药水移除模块
     public static final DeferredHolder<Item, ModuleItem<?>> ITEM_DRACONIUM_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
         "item_draconium_effect_remove", 
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIUM_EFFECT_REMOVE.get())
     ):null;
 
-    // 双足飞龙药水加载模块
+    // 双足飞龙药水移除模块
     public static final DeferredHolder<Item, ModuleItem<?>> ITEM_WYVERN_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
         "item_wyvern_effect_remove", 
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.WYVERN_EFFECT_REMOVE.get())
     ):null;
 
-    // 神龙药水加载模块
+    // 神龙药水移除模块
     public static final DeferredHolder<Item, ModuleItem<?>> ITEM_DRACONIC_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
         "item_draconic_effect_remove", 
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIC_EFFECT_REMOVE.get())
     ):null;
 
-    // 混沌药水加载模块
+    // 混沌药水移除模块
     public static final DeferredHolder<Item, ModuleItem<?>> ITEM_CHAOTIC_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
         "item_chaotic_effect_remove", 
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CHAOTIC_EFFECT_REMOVE.get())
     ):null;
 
-    // 创造药水加载模块
+    // 创造药水移除模块
     public static final DeferredHolder<Item, ModuleItem<?>> ITEM_CREATE_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
         "item_create_effect_remove", 
         () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CREATE_EFFECT_REMOVE.get())
+    ):null;
+
+    // 附魔加载模块
+    public static final DeferredHolder<Item, ModuleItem<?>> ITEM_DRACONIUM_ENCHANTED_LOAD = ITEMS != null? ITEMS.register(
+        "item_draconium_enchanted_load", 
+        () -> new EnchantedModuleItem(new Item.Properties(), () -> CustomModule.DRACONIUM_ENCHANTED_LOAD.get())
+    ):null;
+
+    // 双足飞龙附魔加载模块
+    public static final DeferredHolder<Item, ModuleItem<?>> ITEM_WYVERN_ENCHANTED_LOAD = ITEMS != null? ITEMS.register(
+        "item_wyvern_enchanted_load", 
+        () -> new EnchantedModuleItem(new Item.Properties(), () -> CustomModule.WYVERN_ENCHANTED_LOAD.get())
+    ):null;
+
+    // 神龙附魔加载模块
+    public static final DeferredHolder<Item, ModuleItem<?>> ITEM_DRACONIC_ENCHANTED_LOAD = ITEMS != null? ITEMS.register(
+        "item_draconic_enchanted_load", 
+        () -> new EnchantedModuleItem(new Item.Properties(), () -> CustomModule.DRACONIC_ENCHANTED_LOAD.get())
+    ):null;
+
+    // 混沌附魔加载模块
+    public static final DeferredHolder<Item, ModuleItem<?>> ITEM_CHAOTIC_ENCHANTED_LOAD = ITEMS != null? ITEMS.register(
+        "item_chaotic_enchanted_load", 
+        () -> new EnchantedModuleItem(new Item.Properties(), () -> CustomModule.CHAOTIC_ENCHANTED_LOAD.get())
+    ):null;
+
+    // 创造附魔加载模块
+    public static final DeferredHolder<Item, ModuleItem<?>> ITEM_CREATE_ENCHANTED_LOAD = ITEMS != null? ITEMS.register(
+        "item_create_enchanted_load", 
+        () -> new EnchantedModuleItem(new Item.Properties(), () -> CustomModule.CREATE_ENCHANTED_LOAD.get())
     ):null;
     //#endregion
 
@@ -154,7 +185,13 @@ public class RegistryModuleItem {
             ITEM_WYVERN_EFFECT_REMOVE.get(),
             ITEM_DRACONIC_EFFECT_REMOVE.get(),
             ITEM_CHAOTIC_EFFECT_REMOVE.get(),
-            ITEM_CREATE_EFFECT_REMOVE.get()
+            ITEM_CREATE_EFFECT_REMOVE.get(),
+
+            ITEM_DRACONIUM_ENCHANTED_LOAD.get(),
+            ITEM_WYVERN_ENCHANTED_LOAD.get(),
+            ITEM_DRACONIC_ENCHANTED_LOAD.get(),
+            ITEM_CHAOTIC_ENCHANTED_LOAD.get(),
+            ITEM_CREATE_ENCHANTED_LOAD.get()
         );
     }
 }

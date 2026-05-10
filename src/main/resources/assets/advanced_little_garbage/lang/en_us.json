@@ -21,9 +21,20 @@
     "item.advanced_little_garbage.item_draconic_effect_remove": "Draconic Effect Remove Module",
     "item.advanced_little_garbage.item_chaotic_effect_remove": "Chaotic Effect Remove Module",
     "item.advanced_little_garbage.item_create_effect_remove": "Create Effect Remove Module",
+    
+    "item.advanced_little_garbage.item_draconium_enchanted_load": "Enchanted Load Module",
+    "item.advanced_little_garbage.item_wyvern_enchanted_load": "Wyvern Enchanted Load Module",
+    "item.advanced_little_garbage.item_draconic_enchanted_load": "Draconic Enchanted Load Module",
+    "item.advanced_little_garbage.item_chaotic_enchanted_load": "Chaotic Enchanted Load Module",
+    "item.advanced_little_garbage.item_create_enchanted_load": "Create Enchanted Load Module",
 
     "module_type.draconicevolution.effect_load.name": "Effect Load",
+    "module_type.draconicevolution.effect_remove.name": "Effect Remove",
+    "module_type.draconicevolution.enchanted_load.name": "Enchanted Load",
 
     "tooltip.advanced_little_garbage.effect_module.effect": "   %s %s",
-    "tooltip.advanced_little_garbage.effect_module.count": "Effect Count: %s [Shift+]"
+    "tooltip.advanced_little_garbage.effect_module.count": "Effect Count: %s [Shift+]",
+    
+    "tooltip.advanced_little_garbage.enchanted_module.enchantment": "   %s %s",
+    "tooltip.advanced_little_garbage.enchanted_module.count": "Enchantment Count: %s [Shift+]"
 }

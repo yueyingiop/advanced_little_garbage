@@ -17,6 +17,7 @@ import com.brandon3055.draconicevolution.init.ModuleCfg;
 import com.yueyingiop.ALG.ALG;
 import com.yueyingiop.ALG.item.DraconiCevolution.modules.EffectLoadModule;
 import com.yueyingiop.ALG.item.DraconiCevolution.modules.EffectRemoveModule;
+import com.yueyingiop.ALG.item.DraconiCevolution.modules.EnchantedLoadModule;
 import com.yueyingiop.ALG.util.ModConditions;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -191,7 +192,7 @@ public class CustomModule {
         )
     ): null;
 
-    // 药水加载
+    // 药水移除
     public static final DeferredHolder<Module<?>, EffectRemoveModule> DRACONIUM_EFFECT_REMOVE = MODULES != null ? MODULES.register(
         "draconium_effect_remove",
         () -> new EffectRemoveModule(
@@ -201,7 +202,7 @@ public class CustomModule {
         )
     ): null;
 
-    // 双足飞龙药水加载
+    // 双足飞龙药水移除
     public static final DeferredHolder<Module<?>, EffectRemoveModule> WYVERN_EFFECT_REMOVE = MODULES != null ? MODULES.register(
         "wyvern_effect_remove",
         () -> new EffectRemoveModule(
@@ -211,7 +212,7 @@ public class CustomModule {
         )
     ): null;
 
-    // 神龙药水加载
+    // 神龙药水移除
     public static final DeferredHolder<Module<?>, EffectRemoveModule> DRACONIC_EFFECT_REMOVE = MODULES != null ? MODULES.register(
         "draconic_effect_remove",
         () -> new EffectRemoveModule(
@@ -221,7 +222,7 @@ public class CustomModule {
         )
     ): null;
 
-    // 混沌药水加载
+    // 混沌药水移除
     public static final DeferredHolder<Module<?>, EffectRemoveModule> CHAOTIC_EFFECT_REMOVE = MODULES != null ? MODULES.register(
         "chaotic_effect_remove",
         () -> new EffectRemoveModule(
@@ -231,11 +232,61 @@ public class CustomModule {
         )
     ): null;
 
-    // 创造药水加载
+    // 创造药水移除
     public static final DeferredHolder<Module<?>, EffectRemoveModule> CREATE_EFFECT_REMOVE = MODULES != null ? MODULES.register(
         "create_effect_remove",
         () -> new EffectRemoveModule(
             RegistryModuleItem.ITEM_CREATE_EFFECT_REMOVE.get(),
+            TechLevel.CHAOTIC,
+            0
+        )
+    ): null;
+
+    // 附魔加载
+    public static final DeferredHolder<Module<?>, EnchantedLoadModule> DRACONIUM_ENCHANTED_LOAD = MODULES != null ? MODULES.register(
+        "draconium_enchanted_load",
+        () -> new EnchantedLoadModule(
+            RegistryModuleItem.ITEM_DRACONIUM_ENCHANTED_LOAD.get(),
+            TechLevel.DRACONIUM,
+            7
+        )
+    ): null;
+
+    // 双足飞龙附魔加载
+    public static final DeferredHolder<Module<?>, EnchantedLoadModule> WYVERN_ENCHANTED_LOAD = MODULES != null ? MODULES.register(
+        "wyvern_enchanted_load",
+        () -> new EnchantedLoadModule(
+            RegistryModuleItem.ITEM_WYVERN_ENCHANTED_LOAD.get(),
+            TechLevel.WYVERN,
+            9
+        )
+    ): null;
+
+    // 神龙附魔加载
+    public static final DeferredHolder<Module<?>, EnchantedLoadModule> DRACONIC_ENCHANTED_LOAD = MODULES != null ? MODULES.register(
+        "draconic_enchanted_load",
+        () -> new EnchantedLoadModule(
+            RegistryModuleItem.ITEM_DRACONIC_ENCHANTED_LOAD.get(),
+            TechLevel.DRACONIC,
+            13
+        )
+    ): null;
+
+    // 混沌附魔加载
+    public static final DeferredHolder<Module<?>, EnchantedLoadModule> CHAOTIC_ENCHANTED_LOAD = MODULES != null ? MODULES.register(
+        "chaotic_enchanted_load",
+        () -> new EnchantedLoadModule(
+            RegistryModuleItem.ITEM_CHAOTIC_ENCHANTED_LOAD.get(),
+            TechLevel.CHAOTIC,
+            19
+        )
+    ): null;
+
+    // 创造附魔加载
+    public static final DeferredHolder<Module<?>, EnchantedLoadModule> CREATE_ENCHANTED_LOAD = MODULES != null ? MODULES.register(
+        "create_enchanted_load",
+        () -> new EnchantedLoadModule(
+            RegistryModuleItem.ITEM_CREATE_ENCHANTED_LOAD.get(),
             TechLevel.CHAOTIC,
             0
         )

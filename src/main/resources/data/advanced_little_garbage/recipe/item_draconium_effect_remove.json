@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "MCM",
+        "WDW",
+        "MCM"
+    ],
+    "key": {
+        "D": {
+            "item": "draconicevolution:module_core"
+        },
+        "M": {
+            "item": "draconicevolution:draconium_ingot"
+        },
+        "C": {
+            "item": "draconicevolution:draconium_core"
+        },
+        "W": {
+            "tag": "c:drinks/watery"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_draconium_effect_remove",
+        "count": 1
+    }
+}

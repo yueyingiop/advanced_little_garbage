@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "MWM",
+        "CDC",
+        "MWM"
+    ],
+    "key": {
+        "D": {
+            "item": "draconicevolution:wyvern_core"
+        },
+        "M": {
+            "item": "draconicevolution:draconium_ingot"
+        },
+        "C": {
+            "item": "advanced_little_garbage:item_draconium_effect_load"
+        },
+        "W": {
+            "tag": "c:drinks/watery"
+        }
+    },
+    "result": {
+        "id": "advanced_little_garbage:item_wyvern_effect_load",
+        "count": 1
+    }
+}

@@ -61,6 +61,12 @@ public class ALG
                     output.accept(RegistryModuleItem.ITEM_DRACONIC_EFFECT_REMOVE.get());
                     output.accept(RegistryModuleItem.ITEM_CHAOTIC_EFFECT_REMOVE.get());
                     output.accept(RegistryModuleItem.ITEM_CREATE_EFFECT_REMOVE.get());
+
+                    output.accept(RegistryModuleItem.ITEM_DRACONIUM_ENCHANTED_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_WYVERN_ENCHANTED_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_DRACONIC_ENCHANTED_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_CHAOTIC_ENCHANTED_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_CREATE_ENCHANTED_LOAD.get());
                 }
                 
             }).build()

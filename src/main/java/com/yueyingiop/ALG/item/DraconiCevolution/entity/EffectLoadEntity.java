@@ -99,10 +99,11 @@ public class EffectLoadEntity extends ModuleEntity<EffectData>{
         // 计算能量消耗
         IOPStorage storage = context.getOpStorage();
         if (storage == null) return;
+        int basePower = ALGConfig.EFFECT_LOAD_BASE_POWER.get();
         int effectCount = effects.effects().size();
         if (effectCount > 0) {
             int totalLevel = effects.effects().values().stream().mapToInt(amp -> amp + 1).sum();
-            long energyCost = (long) totalLevel * effectCount * 100;
+            long energyCost = (long) totalLevel * effectCount * basePower;
 
             // 能量不足则清除效果并停止
             if (storage.getOPStored() < energyCost) {

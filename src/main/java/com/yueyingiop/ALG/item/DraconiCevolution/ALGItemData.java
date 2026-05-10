@@ -2,6 +2,7 @@ package com.yueyingiop.ALG.item.DraconiCevolution;
 
 import com.yueyingiop.ALG.ALG;
 import com.yueyingiop.ALG.item.DraconiCevolution.data.EffectData;
+import com.yueyingiop.ALG.item.DraconiCevolution.data.EnchantedData;
 import com.yueyingiop.ALG.util.ModConditions;
 
 import net.minecraft.core.component.DataComponentType;
@@ -25,6 +26,8 @@ public class ALGItemData {
     // 药水模块存储的效果数据组件
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<EffectData>> EFFECT_LOAD_MODULE;
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<EffectData>> EFFECT_REMOVE_MODULE;
+    // 附魔模块存储的附魔数据组件
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<EnchantedData>> ENCHANTED_LOAD_MODULE;
 
     static {
         if (DATA != null) {
@@ -45,9 +48,19 @@ public class ALGItemData {
                     .cacheEncoding()
                     .build()
             );
+
+            ENCHANTED_LOAD_MODULE = DATA.register(
+                "enchanted_load_module",
+                () -> DataComponentType.<EnchantedData>builder()
+                    .persistent(EnchantedData.CODEC)
+                    .networkSynchronized(EnchantedData.STREAM_CODEC)
+                    .cacheEncoding()
+                    .build()
+            );
         } else {
             EFFECT_LOAD_MODULE = null;
             EFFECT_REMOVE_MODULE = null;
+            ENCHANTED_LOAD_MODULE = null;
         }
     }
 }
