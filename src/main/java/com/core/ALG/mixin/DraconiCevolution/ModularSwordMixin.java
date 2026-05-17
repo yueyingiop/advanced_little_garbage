@@ -22,6 +22,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 
 @Mixin(ModularSword.class)
+@SuppressWarnings("null")
 public class ModularSwordMixin extends SwordItem implements IModularMelee {
 
     private final TechLevel techLevel;

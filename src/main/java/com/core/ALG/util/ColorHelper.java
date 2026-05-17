@@ -6,6 +6,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.Mth;
 
+@SuppressWarnings("null")
 public class ColorHelper {
 
     /**

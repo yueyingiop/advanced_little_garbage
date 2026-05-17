@@ -23,6 +23,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 
 @Mixin(ModularAxe.class)
+@SuppressWarnings("null")
 public class ModularAxeMixin extends AxeItem implements IModularMelee {
     private final TechLevel techLevel;
     private final DETier itemTier;

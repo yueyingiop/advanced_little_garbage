@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "draconicevolution:item/create_energy_core"
+        "layer0": "advanced_little_garbage:item/create_energy_core"
     }
 }

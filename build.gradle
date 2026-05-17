@@ -119,6 +119,9 @@ repositories {
             includeGroup "dev.latvian.apps"
         }
     }
+
+    // 龙之研究
+    maven { url = "https://maven.covers1624.net/" }
 }
 
 dependencies {

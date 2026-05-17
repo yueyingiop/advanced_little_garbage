@@ -14,6 +14,8 @@ import com.brandon3055.draconicevolution.api.modules.data.ShieldData;
 import com.brandon3055.draconicevolution.api.modules.lib.ModuleImpl;
 import com.brandon3055.draconicevolution.init.DEModules;
 import com.brandon3055.draconicevolution.init.ModuleCfg;
+import com.core.ALG.item.DraconiCevolution.module.EffectLoadModule;
+import com.core.ALG.item.DraconiCevolution.module.EffectRemoveModule;
 import com.core.ALG.util.ModConditions;
 
 import net.minecraftforge.registries.DeferredRegister;
@@ -22,6 +24,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class CustomModule {
     public static final DeferredRegister<Module<?>> MODULES = ModConditions.isDraconicEvolutionLoaded() ? DEModules.MODULES : null;
 
+    //#region 新增原版模块
     // 创造能量
     public static final RegistryObject<Module<?>> CREATE_ENERGY = MODULES != null ? MODULES.register(
         "create_energy", 
@@ -131,7 +134,111 @@ public class CustomModule {
             return module;
         }
     ): null;
+    //#endregion
 
+    //#region 新增自定义模块
+    // 药水加载
+    public static final RegistryObject<EffectLoadModule> DRACONIUM_EFFECT_LOAD = MODULES != null ? MODULES.register(
+        "draconium_effect_load",
+        () -> new EffectLoadModule(
+            RegistryModuleItem.ITEM_DRACONIUM_EFFECT_LOAD.get(),
+            TechLevel.DRACONIUM,
+            3
+        )
+    ): null;
+
+    // 双足飞龙药水加载
+    public static final RegistryObject<EffectLoadModule> WYVERN_EFFECT_LOAD = MODULES != null ? MODULES.register(
+        "wyvern_effect_load",
+        () -> new EffectLoadModule(
+            RegistryModuleItem.ITEM_WYVERN_EFFECT_LOAD.get(),
+            TechLevel.WYVERN,
+            5
+        )
+    ): null;
+
+    // 神龙药水加载
+    public static final RegistryObject<EffectLoadModule> DRACONIC_EFFECT_LOAD = MODULES != null ? MODULES.register(
+        "draconic_effect_load",
+        () -> new EffectLoadModule(
+            RegistryModuleItem.ITEM_DRACONIC_EFFECT_LOAD.get(),
+            TechLevel.DRACONIC,
+            7
+        )
+    ): null;
+
+    // 混沌药水加载
+    public static final RegistryObject<EffectLoadModule> CHAOTIC_EFFECT_LOAD = MODULES != null ? MODULES.register(
+        "chaotic_effect_load",
+        () -> new EffectLoadModule(
+            RegistryModuleItem.ITEM_CHAOTIC_EFFECT_LOAD.get(),
+            TechLevel.CHAOTIC,
+            9
+        )
+    ): null;
+
+    // 创造药水加载
+    public static final RegistryObject<EffectLoadModule> CREATE_EFFECT_LOAD = MODULES != null ? MODULES.register(
+        "create_effect_load",
+        () -> new EffectLoadModule(
+            RegistryModuleItem.ITEM_CREATE_EFFECT_LOAD.get(),
+            TechLevel.CHAOTIC,
+            0
+        )
+    ): null;
+
+    // 药水移除
+    public static final RegistryObject<EffectRemoveModule> DRACONIUM_EFFECT_REMOVE = MODULES != null ? MODULES.register(
+        "draconium_effect_remove",
+        () -> new EffectRemoveModule(
+            RegistryModuleItem.ITEM_DRACONIUM_EFFECT_REMOVE.get(),
+            TechLevel.DRACONIUM,
+            3
+        )
+    ): null;
+
+    // 双足飞龙药水移除
+    public static final RegistryObject<EffectRemoveModule> WYVERN_EFFECT_REMOVE = MODULES != null ? MODULES.register(
+        "wyvern_effect_remove",
+        () -> new EffectRemoveModule(
+            RegistryModuleItem.ITEM_WYVERN_EFFECT_REMOVE.get(),
+            TechLevel.WYVERN,
+            5
+        )
+    ): null;
+
+    // 神龙药水移除
+    public static final RegistryObject<EffectRemoveModule> DRACONIC_EFFECT_REMOVE = MODULES != null ? MODULES.register(
+        "draconic_effect_remove",
+        () -> new EffectRemoveModule(
+            RegistryModuleItem.ITEM_DRACONIC_EFFECT_REMOVE.get(),
+            TechLevel.DRACONIC,
+            7
+        )
+    ): null;
+
+    // 混沌药水移除
+    public static final RegistryObject<EffectRemoveModule> CHAOTIC_EFFECT_REMOVE = MODULES != null ? MODULES.register(
+        "chaotic_effect_remove",
+        () -> new EffectRemoveModule(
+            RegistryModuleItem.ITEM_CHAOTIC_EFFECT_REMOVE.get(),
+            TechLevel.CHAOTIC,
+            9
+        )
+    ): null;
+
+    // 创造药水移除
+    public static final RegistryObject<EffectRemoveModule> CREATE_EFFECT_REMOVE = MODULES != null ? MODULES.register(
+        "create_effect_remove",
+        () -> new EffectRemoveModule(
+            RegistryModuleItem.ITEM_CREATE_EFFECT_REMOVE.get(),
+            TechLevel.CHAOTIC,
+            0
+        )
+    ): null;
+    //#endregion
+
+    //#region 模块数据
     private static Function<Module<EnergyData>, EnergyData> energyData(long defCapacity, long defTransfer) {
         return e -> {
             long capacity = ModuleCfg.getModuleLong(e, "capacity", defCapacity);
@@ -176,4 +283,5 @@ public class CustomModule {
             return new ProjectileData(velocityModifier, accuracyModifier, antiGravModifier, penetrationModifier, damageModifier);
         };
     }
+    //#endregion
 }

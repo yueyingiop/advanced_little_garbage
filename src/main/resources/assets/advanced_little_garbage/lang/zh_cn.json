@@ -1,0 +1,78 @@
+{
+    "itemGroup.alg_tab": "高级小垃圾",
+
+    "item.advanced_little_garbage.create_energy_core": "创造能量核心",
+    "item.advanced_little_garbage.item_create_energy": "创造能量模块",
+    "item.advanced_little_garbage.item_create_shield_control": "创造护盾控制模块",
+    "item.advanced_little_garbage.item_create_large_shield_capacity": "创造大型护盾增强",
+    "item.advanced_little_garbage.item_chaotic_auto_feed": "混沌自动进食模块",
+    "item.advanced_little_garbage.item_create_auto_feed": "创造自动进食模块",
+    "item.advanced_little_garbage.item_create_damage": "创造伤害模块",
+    "item.advanced_little_garbage.item_create_projectile": "创造弹射物模块",
+
+    "item.advanced_little_garbage.item_draconium_effect_load": "效果加载模块",
+    "item.advanced_little_garbage.item_wyvern_effect_load": "双足飞龙效果加载模块",
+    "item.advanced_little_garbage.item_draconic_effect_load": "神龙效果加载模块",
+    "item.advanced_little_garbage.item_chaotic_effect_load": "混沌效果加载模块",
+    "item.advanced_little_garbage.item_create_effect_load": "创造效果加载模块",
+    
+    "item.advanced_little_garbage.item_draconium_effect_remove": "效果移除模块",
+    "item.advanced_little_garbage.item_wyvern_effect_remove": "双足飞龙效果移除模块",
+    "item.advanced_little_garbage.item_draconic_effect_remove": "神龙效果移除模块",
+    "item.advanced_little_garbage.item_chaotic_effect_remove": "混沌效果移除模块",
+    "item.advanced_little_garbage.item_create_effect_remove": "创造效果移除模块",
+    
+    "item.advanced_little_garbage.item_draconium_enchanted_load": "附魔加载模块",
+    "item.advanced_little_garbage.item_wyvern_enchanted_load": "双足飞龙附魔加载模块",
+    "item.advanced_little_garbage.item_draconic_enchanted_load": "神龙附魔加载模块",
+    "item.advanced_little_garbage.item_chaotic_enchanted_load": "混沌附魔加载模块",
+    "item.advanced_little_garbage.item_create_enchanted_load": "创造附魔加载模块",
+
+    "module_type.draconicevolution.effect_load.name": "效果加载",
+    "module_type.draconicevolution.effect_remove.name": "效果移除",
+    "module_type.draconicevolution.enchanted_load.name": "附魔加载",
+
+    "tooltip.advanced_little_garbage.effect_module.effect": "   %s %s",
+    "tooltip.advanced_little_garbage.effect_module.count": "效果数量：%s [Shift+]",
+
+    "tooltip.advanced_little_garbage.enchanted_module.enchantment": "   %s %s",
+    "tooltip.advanced_little_garbage.enchanted_module.count": "附魔数量：%s [Shift+]",
+
+    "jei.advanced_little_garbage.effect_modules.desc1": "类型:",
+    "jei.advanced_little_garbage.effect_modules.desc2": "  效果加载模块: 模块中被注入\n  的效果会加载到玩家身上\n",
+    "jei.advanced_little_garbage.effect_modules.desc3": "  效果移除模块: 模块中的效果\n  会从玩家身上移除\n\n",
+    "jei.advanced_little_garbage.effect_modules.desc4": "使用:",
+    "jei.advanced_little_garbage.effect_modules.desc5": "  注入效果: 在铁砧中左侧放入\n  模块, 右侧放入药水\n",
+    "jei.advanced_little_garbage.effect_modules.desc6": "  效果回退: 模块放在副手, 主\n  手手持玻璃瓶, SHIFT+右键\n  进行回退\n\n",
+    "jei.advanced_little_garbage.effect_modules.desc7": "能耗:",
+    "jei.advanced_little_garbage.effect_modules.desc8": "  总药水等级 * 药水数量 * 基础消耗\n\n",
+    "jei.advanced_little_garbage.effect_modules.desc9": "注意事项:",
+    "jei.advanced_little_garbage.effect_modules.desc10": "  1. 创造模块不能注入也不能回退",
+    "jei.advanced_little_garbage.effect_modules.desc11": "  2. 创造模块不消耗能量",
+    "jei.advanced_little_garbage.effect_modules.desc12": "  3. 创造模块会自动识别所有效果",
+    "jei.advanced_little_garbage.effect_modules.desc13": "  4. 创造模块默认提供V级效果",
+    "jei.advanced_little_garbage.effect_modules.desc14": "  5. 可以在配置文件中修改基础能\n  耗/效果等级/黑名单",
+
+    "jei.advanced_little_garbage.enchanted_modules.desc1": "使用:",
+    "jei.advanced_little_garbage.enchanted_modules.desc2": "  注入附魔:在铁砧中左侧放入\n  附魔书, 右侧放入模块\n",
+    "jei.advanced_little_garbage.enchanted_modules.desc3": "  附魔回退:模块放在副手, 主\n  手手持书, SHIFT+右键进行\n  回退\n\n",
+    "jei.advanced_little_garbage.enchanted_modules.desc4": "能耗:",
+    "jei.advanced_little_garbage.enchanted_modules.desc5": "  总附魔等级 * 附魔数量 * 基础消耗\n\n",
+    "jei.advanced_little_garbage.enchanted_modules.desc6": "注意事项:",
+    "jei.advanced_little_garbage.enchanted_modules.desc7": "  1. 创造模块不能注入也不能回退",
+    "jei.advanced_little_garbage.enchanted_modules.desc8": "  2. 创造模块不消耗能量",
+    "jei.advanced_little_garbage.enchanted_modules.desc9": "  3. 创造模块会自动识别所有效果",
+    "jei.advanced_little_garbage.enchanted_modules.desc10": "  4. 创造模块默认提供X级附魔",
+    "jei.advanced_little_garbage.enchanted_modules.desc11": "  5. 可以在配置文件中修改基础能\n  耗/附魔等级/黑名单",
+
+    "advanced_little_garbage.configuration.draconic_evolution": "龙之研究",
+    "advanced_little_garbage.configuration.effect_load_base_power": "效果加载模块基础能耗",
+    "advanced_little_garbage.configuration.effect_remove_base_power": "效果移除模块基础能耗",
+    "advanced_little_garbage.configuration.enchanted_load_base_power": "附魔加载模块基础能耗",
+    "advanced_little_garbage.configuration.create_effect_load_level": "创造效果加载模块效果等级",
+    "advanced_little_garbage.configuration.create_enchanted_load_level": "创造附魔加载模块附魔等级",
+    "advanced_little_garbage.configuration.create_effect_load_blacklist": "创造效果加载模块黑名单",
+    "advanced_little_garbage.configuration.create_effect_remove_blacklist": "创造效果移除模块黑名单",
+    "advanced_little_garbage.configuration.create_enchanted_load_blacklist": "创造附魔加载模块黑名单"
+
+}

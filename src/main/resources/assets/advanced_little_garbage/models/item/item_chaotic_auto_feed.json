@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "draconicevolution:item/module/chaotic",
-    "layer1": "draconicevolution:module/chaotic_auto_feed"
+    "layer1": "advanced_little_garbage:module/chaotic_auto_feed"
   }
 }

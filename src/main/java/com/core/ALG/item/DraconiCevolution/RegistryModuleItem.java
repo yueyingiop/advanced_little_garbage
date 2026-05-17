@@ -3,6 +3,7 @@ package com.core.ALG.item.DraconiCevolution;
 import com.brandon3055.draconicevolution.api.modules.items.EnergyModuleItem;
 import com.brandon3055.draconicevolution.api.modules.items.ModuleItem;
 import com.core.ALG.ALG;
+import com.core.ALG.item.DraconiCevolution.moduleItem.EffectModuleItem;
 import com.core.ALG.util.ModConditions;
 
 import net.minecraft.world.item.Item;
@@ -57,4 +58,65 @@ public class RegistryModuleItem {
         "item_create_projectile", 
         () -> new ModuleItem<>(CustomModule.CREATE_PROJECTILE)
     ):null;
+
+    //#region注册自定义模块物品
+    // 药水加载模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_DRACONIUM_EFFECT_LOAD = ITEMS != null? ITEMS.register(
+        "item_draconium_effect_load", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIUM_EFFECT_LOAD.get())
+    ):null;
+
+    // 双足飞龙药水加载模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_WYVERN_EFFECT_LOAD = ITEMS != null? ITEMS.register(
+        "item_wyvern_effect_load", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.WYVERN_EFFECT_LOAD.get())
+    ):null;
+    
+    // 神龙药水加载模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_DRACONIC_EFFECT_LOAD = ITEMS != null? ITEMS.register(
+        "item_draconic_effect_load", () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIC_EFFECT_LOAD.get())
+    ):null;
+
+    // 混沌药水加载模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_CHAOTIC_EFFECT_LOAD = ITEMS != null? ITEMS.register(
+        "item_chaotic_effect_load", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CHAOTIC_EFFECT_LOAD.get())
+    ):null;
+
+    // 创造药水加载模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_CREATE_EFFECT_LOAD = ITEMS != null? ITEMS.register(
+        "item_create_effect_load", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CREATE_EFFECT_LOAD.get())
+    ):null;
+
+    // 药水移除模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_DRACONIUM_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
+        "item_draconium_effect_remove", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIUM_EFFECT_REMOVE.get())
+    ):null;
+
+    // 双足飞龙药水移除模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_WYVERN_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
+        "item_wyvern_effect_remove", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.WYVERN_EFFECT_REMOVE.get())
+    ):null;
+    
+    // 神龙药水移除模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_DRACONIC_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
+        "item_draconic_effect_remove", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.DRACONIC_EFFECT_REMOVE.get())
+    ):null;
+
+    // 混沌药水移除模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_CHAOTIC_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
+        "item_chaotic_effect_remove", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CHAOTIC_EFFECT_REMOVE.get())
+    ):null;
+
+    // 创造药水移除模块
+    public static final RegistryObject<ModuleItem<?>> ITEM_CREATE_EFFECT_REMOVE = ITEMS != null? ITEMS.register(
+        "item_create_effect_remove", 
+        () -> new EffectModuleItem(new Item.Properties(), () -> CustomModule.CREATE_EFFECT_REMOVE.get())
+    ):null;
+    //#endregion
 }

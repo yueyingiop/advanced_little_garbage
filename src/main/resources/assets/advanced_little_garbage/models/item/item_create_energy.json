@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "draconicevolution:item/module/create",
-    "layer1": "draconicevolution:module/create_energy"
+    "layer0": "advanced_little_garbage:item/module/create",
+    "layer1": "advanced_little_garbage:module/create_energy"
   }
 }

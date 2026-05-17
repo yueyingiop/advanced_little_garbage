@@ -3,6 +3,8 @@ package com.core.ALG;
 import com.core.ALG.item.RegistryItem;
 import com.core.ALG.item.DraconiCevolution.CustomModule;
 import com.core.ALG.item.DraconiCevolution.RegistryModuleItem;
+import com.core.ALG.item.DraconiCevolution.handler.AnvilUpdateEventHandler;
+import com.core.ALG.item.DraconiCevolution.handler.PlayerInteractEventHander;
 import com.core.ALG.util.ModConditions;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
@@ -20,6 +22,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 @Mod(ALG.MODID)
+@SuppressWarnings("null")
 public class ALG
 {
     public static final String MODID = "advanced_little_garbage";
@@ -43,6 +46,18 @@ public class ALG
                     output.accept(RegistryModuleItem.ITEM_CREATE_AUTO_FEED.get());
                     output.accept(RegistryModuleItem.ITEM_CREATE_DAMAGE.get());
                     output.accept(RegistryModuleItem.ITEM_CREATE_PROJECTILE.get());
+
+                    output.accept(RegistryModuleItem.ITEM_DRACONIUM_EFFECT_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_WYVERN_EFFECT_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_DRACONIC_EFFECT_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_CHAOTIC_EFFECT_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_CREATE_EFFECT_LOAD.get());
+                    output.accept(RegistryModuleItem.ITEM_DRACONIUM_EFFECT_REMOVE.get());
+                    output.accept(RegistryModuleItem.ITEM_WYVERN_EFFECT_REMOVE.get());
+                    output.accept(RegistryModuleItem.ITEM_DRACONIC_EFFECT_REMOVE.get());
+                    output.accept(RegistryModuleItem.ITEM_CHAOTIC_EFFECT_REMOVE.get());
+                    output.accept(RegistryModuleItem.ITEM_CREATE_EFFECT_REMOVE.get());
+                    
                 }
                 
             }).build()
@@ -56,6 +71,8 @@ public class ALG
         if (ModConditions.isDraconicEvolutionLoaded()) {
             CustomModule.MODULES.register(modEventBus);
             RegistryModuleItem.ITEMS.register(modEventBus);
+            MinecraftForge.EVENT_BUS.register(new AnvilUpdateEventHandler());
+            MinecraftForge.EVENT_BUS.register(new PlayerInteractEventHander());
         }
         RegistryItem.ITEMS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);

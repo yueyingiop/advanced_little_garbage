@@ -21,7 +21,12 @@ public class EnergyEntityMxin extends ModuleEntity<EnergyData> {
     public void tick(ModuleContext context) {
         super.tick(context);
         IOPStorage storage = context.getOpStorage();
-        if (module.getItem() == RegistryModuleItem.ITEM_CREATE_ENERGY.get() && storage != null && storage.getEnergyStored() != Integer.MAX_VALUE-1) {
+        if (
+            (
+                module.getItem() == RegistryModuleItem.ITEM_CREATE_ENERGY.get() || 
+                module.getItem() == RegistryModuleItem.ITEM_CREATE_SHIELD_CONTROL.get() ||
+                module.getItem() == RegistryModuleItem.ITEM_CREATE_LARGE_SHIELD_CAPACITY.get()
+            ) && storage != null && storage.getEnergyStored() != Integer.MAX_VALUE-1) {
             storage.modifyEnergyStored(Integer.MAX_VALUE-1);
         }
     }

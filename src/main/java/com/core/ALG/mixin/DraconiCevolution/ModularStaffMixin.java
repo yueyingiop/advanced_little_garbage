@@ -24,6 +24,7 @@ import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 
 @Mixin(ModularStaff.class)
+@SuppressWarnings("null")
 public class ModularStaffMixin extends DiggerItem implements IModularMelee {
     private final TechLevel techLevel;
     private final DETier itemTier;
